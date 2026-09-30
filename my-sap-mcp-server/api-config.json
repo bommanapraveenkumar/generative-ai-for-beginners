@@ -1,0 +1,36 @@
+{
+  "server": {
+    "name": "my-sap-mcp-server",
+    "version": "1.0.0",
+    "description": "MCP server for a SAP OData V2 service"
+  },
+  "apis": [
+    {
+      "name": "sap-odata",
+      "destination": "SAP_ODATA",
+      "pathPrefix": "/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+      "csrfProtected": true,
+      "entitySets": [
+        {
+          "entitySet": "A_BusinessPartner",
+          "urlPath": "A_BusinessPartner",
+          "description": "SAP Business Partner master data (OData V2)",
+          "category": "master-data",
+          "keys": [{ "name": "BusinessPartner", "type": "string" }],
+          "operations": {
+            "list": true,
+            "get": true,
+            "create": false,
+            "update": false,
+            "delete": false
+          },
+          "filterableProperties": [
+            "BusinessPartner",
+            "BusinessPartnerName",
+            "BusinessPartnerCategory"
+          ]
+        }
+      ]
+    }
+  ]
+}
