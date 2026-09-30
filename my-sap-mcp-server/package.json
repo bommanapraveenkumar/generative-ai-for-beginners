@@ -1,0 +1,26 @@
+{
+  "name": "my-sap-mcp-server",
+  "version": "1.0.0",
+  "description": "Minimal SAP OData MCP server powered by odata-mcp-proxy",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "start:stdio": "MCP_TRANSPORT=stdio node server.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "sap",
+    "odata",
+    "odata-mcp-proxy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "odata-mcp-proxy": "^1.3.0"
+  }
+}
